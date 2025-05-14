@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Video</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .dark-mode {
+            background-color: #222;
+            color: white;
+        }
+        .btn {
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn-back {
+            background: #007bff;
+            color: white;
+            border: none;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+        .btn-back:hover {
+            background: #0056b3;
+        }
+        .btn-dark-mode {
+            background: #28a745;
+            color: white;
+            border: none;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+        .btn-dark-mode:hover {
+            background: #1e7e34;
+        }
+        .btn-top {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #dc3545;
+            color: white;
+            border: none;
+        }
+        .btn-top:hover {
+            background: #b02a37;
+        }
+        .new-p {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 60px;
+        }
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        iframe {
+            width: 80%;
+            max-width: 900px;
+            height: 450px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="btn btn-back" onclick="window.location.href='index.html'">⬅ Back</button>
+    <button class="btn btn-top" onclick="scrollToTop()">⬆ Top</button>
+
+    <p class="new-p">Thank you for your attention!!!</p>
+
+    <div class="video-container">
+        <iframe 
+            src="https://www.youtube.com/embed/UOUfXZpD4co" 
+            frameborder="0" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+        
+        window.onscroll = function() {
+            let topButton = document.querySelector(".btn-top");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                topButton.style.display = "block";
+            } else {
+                topButton.style.display = "none";
+            }
+        };
+        
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

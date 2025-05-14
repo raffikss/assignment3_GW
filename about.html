@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .scrolled {
+            background-color: rgba(0, 0, 0, 0.9) !important;
+            transition: background-color 0.3s ease;
+        }
+        .team-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .team-member {
+            text-align: center;
+            background: #403e3e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 250px;
+        }
+        .team-member img {
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        #history {
+            padding: 20px;
+            background: #403e3e;
+            margin-top: 20px;
+        }
+        #history ul {
+            list-style: none;
+            padding: 0;
+        }
+        #history li {
+            padding: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Bootstrap Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Team Intro</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5 pt-4">
+        <button onclick="window.location.href='index.html'" class="btn btn-secondary mt-4">Back</button>
+    </div>
+
+    <section id="team" class="container text-center my-5">
+        <h1 class="mb-4">Meet Our Team</h1>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="images/member1.jpg" alt="Linda Brante" width="150">
+                <h2>Linda Brante</h2>
+                <p>Leader</p>
+                <button class="btn btn-primary" onclick="window.location.href='member1.html'">More Info</button>
+            </div>
+            <div class="team-member">
+                <img src="images/member2.jpg" alt="Rafaels Dmitrijevs" width="150">
+                <h2>Rafaels Dmitrijevs</h2>
+                <p>Member</p>
+                <button class="btn btn-primary" onclick="window.location.href='member2.html'">More Info</button>
+            </div>
+            <div class="team-member">
+                <img src="images/member3.jpg" alt="Ralfs Fridvalds" width="150">
+                <h2>Ralfs Fridvalds</h2>
+                <p>Member</p>
+                <button class="btn btn-primary" onclick="window.location.href='member3.html'">More Info</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="history" class="container">
+        <h1 class="text-center mb-4">Our History</h1>
+        <ul>
+            <li><strong>March 1:</strong> Created project structure and main pages (About, Contact, Index, Services).</li>
+            <li><strong>March 2:</strong> Finished styling with CSS, added more HTML pages, and finalized the project.</li>
+            <li><strong>March 3:</strong> Completed project documentation.</li>
+        </ul>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        window.addEventListener("scroll", function() {
+            let navbar = document.getElementById("navbar");
+            navbar.classList.toggle("scrolled", window.scrollY > 50);
+        });
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>

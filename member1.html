@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .scrolled {
+            background-color: rgba(0, 0, 0, 0.9) !important;
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+
+    <!-- Bootstrap Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">My Personal Page</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Back Button -->
+    <button class="back-button btn btn-secondary" onclick="window.location.href='about.html'">Back</button>
+
+    <!-- Main Content -->
+    <section class="container mt-5 text-center">
+        <img src="images/member1.jpg" alt="Member 1" width="200" class="rounded-circle">
+        <header>
+            <h1>Welcome to My Personal Page!</h1>
+            <h2>Get to know a bit about me!</h2>
+        </header>
+
+        <section class="about-me mt-5">
+            <h1>About Me</h1>
+            <p>Hello! My name is Linda Brante. I was born on July 14th, 2004.</p>
+        </section>
+
+        <section class="free-time mt-5">
+            <h2>What I Like to Do in My Free Time</h2>
+            <ul class="list-group">
+                <li class="list-group-item">Reading: I enjoy diving into both fiction and non-fiction books. Reading lets me explore new worlds and learn new things.</li>
+                <li class="list-group-item">Traveling: Exploring new places and experiencing different cultures is something I find fascinating.</li>
+                <li class="list-group-item">Gaming: Whether it's on PC, console, or mobile, I enjoy playing games as a way to relax and challenge myself.</li>
+                <li class="list-group-item">Music: I love listening to music and even play a few instruments. Music is a great way to unwind and find inspiration.</li>
+            </ul>
+        </section>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center mt-5">
+        <p>Made with love by Linda</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        window.addEventListener("scroll", function() {
+            let navbar = document.getElementById("navbar");
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
